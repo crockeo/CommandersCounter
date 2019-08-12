@@ -2,13 +2,21 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 
 import 'circle_button.dart';
+import 'mana_icon.dart';
 
 class SecondaryCounter extends StatefulWidget {
+  const SecondaryCounter({this.symbol, Key key}) : super(key: key);
+
+  final String symbol;
+
   @override
-  SecondaryCounterState createState() => SecondaryCounterState();
+  SecondaryCounterState createState() => SecondaryCounterState(symbol);
 }
 
 class SecondaryCounterState extends State<SecondaryCounter> {
+  SecondaryCounterState(this._symbol);
+
+  final String _symbol;
   int _counter = 0;
 
   void _changeCount(int diff) {
@@ -38,6 +46,10 @@ class SecondaryCounterState extends State<SecondaryCounter> {
           onLongPress: () => _changeCount(-5),
           onPressed: () => _changeCount(-1),
         ),
+        ManaIcon(
+          size: 36,
+          symbol: this._symbol,
+        )
       ],
     );
   }

@@ -94,7 +94,21 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             LifeCounter(),
-            SecondaryCounter(),
+            Flex(
+              direction: Axis.horizontal,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                SecondaryCounter(symbol: 'w'),
+                SecondaryCounter(symbol: 'u'),
+                SecondaryCounter(symbol: 'b'),
+                SecondaryCounter(symbol: 'r'),
+                SecondaryCounter(symbol: 'g'),
+                SecondaryCounter(symbol: 'c'),
+                SecondaryCounter(symbol: 'energy'),
+                SecondaryCounter(symbol: 'experience'),
+                SecondaryCounter(symbol: 'poison'),
+              ],
+            ),
             Text(
               'You have pushed the button this many times:',
             ),
