@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import 'commander_button.dart';
 import 'life_counter.dart';
 import 'secondary_counter.dart';
 
@@ -94,6 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             LifeCounter(),
+            CommanderButton(),
             Flex(
               direction: Axis.horizontal,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
