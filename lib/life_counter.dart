@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
+
 import 'circle_button.dart';
 
 class LifeCounter extends StatefulWidget {
@@ -11,7 +13,8 @@ class LifeCounterState extends State<LifeCounter> {
 
   void _changeLife(int diff) {
     setState(() {
-      _life = _life + diff;
+      _life += diff;
+      _life = min(_life, 999);
     });
   }
 
@@ -27,10 +30,10 @@ class LifeCounterState extends State<LifeCounter> {
           icon: Icons.remove,
         ),
         Container(
+          alignment: Alignment.center,
           child: Text(_life.toString(), style: TextStyle(fontSize: 36)),
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          width: 90,
         ),
-
         LifeButton(
           onPressed: () => this._changeLife(1),
           onLongPress: () => this._changeLife(5),
