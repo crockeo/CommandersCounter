@@ -1,16 +1,13 @@
 # commanders_counter
 
-A new Flutter project.
+A utility for keeping track of all of your counters in EDH. Intended for personal use (i.e. keeping track of your own
+counters, not that of the table). Includes support for tracking:
 
-## Getting Started
+1. Life total
+2. Mana
+3. Commander damage
+4. Player counters
 
-This project is a starting point for a Flutter application.
+## Building
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+See flutter documentation for building. Mobile apps coming.
