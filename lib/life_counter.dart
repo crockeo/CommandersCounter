@@ -1,4 +1,5 @@
-import "package:flutter/material.dart";
+import 'package:flutter/material.dart';
+import 'circle_button.dart';
 
 class LifeCounter extends StatefulWidget {
   @override
@@ -41,29 +42,26 @@ class LifeCounterState extends State<LifeCounter> {
 }
 
 class LifeButton extends StatelessWidget {
-  const LifeButton({this.onPressed, this.onLongPress, this.icon, Key key})
-      : super(key: key);
+  const LifeButton({
+    this.icon,
+    this.onLongPress,
+    this.onPressed,
+    Key key,
+  }) : super(key: key);
 
-  final VoidCallback onPressed;
-  final VoidCallback onLongPress;
   final IconData icon;
+  final VoidCallback onLongPress;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
-    return ClipOval(
-      child: Material(
-        child: InkWell(
-          child: SizedBox(
-            child: Icon(this.icon, color: Colors.white),
-            height: 56,
-            width: 56,
-          ),
-          onTap: this.onPressed,
-          onLongPress: this.onLongPress,
-          splashColor: Colors.lightBlueAccent,
-        ),
-        color: Colors.blue,
-      ),
+    return CircleButton(
+      accentColor: Colors.lightBlueAccent,
+      color: Colors.lightBlue,
+      icon: this.icon,
+      onLongPress: this.onLongPress,
+      onPressed: this.onPressed,
+      size: 50,
     );
   }
 }
