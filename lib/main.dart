@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'life_counter.dart';
 
 void main() => runApp(MyApp());
 
@@ -91,6 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            LifeCounter(),
             Text(
               'You have pushed the button this many times:',
             ),
