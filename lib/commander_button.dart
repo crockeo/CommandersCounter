@@ -7,14 +7,15 @@ class CommanderButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: CircleButton(
-        accentColor: Colors.grey.shade100,
+        accentColor: Colors.grey.shade400,
         color: Colors.grey,
         icon: Icons.more_horiz,
         onLongPress: () {},
         onPressed: () {},
-        size: 128,
+        shadow: true,
+        size: 256,
       ),
-      padding: EdgeInsets.symmetric(vertical: 20),
+      padding: EdgeInsets.symmetric(vertical: 50),
     );
   }
 }
